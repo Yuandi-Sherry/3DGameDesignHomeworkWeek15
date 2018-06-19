@@ -26,7 +26,6 @@ public class NPC : Blood {
 	
 	// Update is called once per frame
 	void Update () {
-		Debug.Log("NPC count" + countNPC);
 		if(sceneController.getResult()==0) {
 			target = sceneController.getPlayerPosition();
 			// 如果NPC没血了，则被摧毁
@@ -52,7 +51,7 @@ public class NPC : Blood {
 		while(sceneController.getResult()==0) {
 			// 控制发射子弹间隔
 			for(double i = 3; i > 0; i -= Time.deltaTime) {
-				yield return 0;
+				yield return null;
 			}
 			if (Vector3.Distance(transform.position, target) < 20) {
 				Factory myFactory = Singleton<Factory>.Instance;

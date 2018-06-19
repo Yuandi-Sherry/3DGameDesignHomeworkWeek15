@@ -25,7 +25,7 @@ public class FirstController : MonoBehaviour, IUserAction {
 		for(int i = 0; i < countNPC; i++) { // 从工厂获得一定数目的NPC
 			myFactory.getTank();
 		}
-		// ？？ 如果玩家坦克被摧毁，则游戏结束？
+		// 订阅Player发布的destroy事件，并响应
 		Player.destroyEvent += setResult; 
 	}
 
@@ -65,11 +65,9 @@ public class FirstController : MonoBehaviour, IUserAction {
 
 	public void shoot() {
 		GameObject bullet = myFactory.getBullet(tankType.PLAYER);
-		//bullet.setActive(true);
 		bullet.transform.position = new Vector3(playerTank.transform.position.x, 1.5f, playerTank.transform.position.z)
 			+ playerTank.transform.forward * 1.5f; // 坦克的位置 + 子弹相对坦克的位置
 		bullet.transform.forward = playerTank.transform.forward;
-		// ?? forward为前方？？ 用欧拉角实现的？？？
 		Rigidbody rb = bullet.GetComponent<Rigidbody>();
 		rb.AddForce(bullet.transform.forward * speed * 10, ForceMode.Impulse);
 	}
@@ -88,5 +86,4 @@ public class FirstController : MonoBehaviour, IUserAction {
 	public void decreaseCountNPC() {
 		countNPC--;
 	}
-
 }

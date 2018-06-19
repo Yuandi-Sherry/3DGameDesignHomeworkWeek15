@@ -84,13 +84,6 @@ public class Factory : MonoBehaviour {
 		return newPS;
 	}
 
-	/*public void destroyEvent(GameObject tank) {
-		tanks.Remove(tank.GetInstanceID());
-		freeTanks.Add(tank.GetInstanceID(), tank);
-		tank.GetComponent<Rigidbody>().velocity = new Vector3(0,0,0);
-		tank.SetActive(false);
-	}
-*/
 	public void recycleTank(GameObject tank) {
         tanks.Remove(tank.GetInstanceID());
         freeTanks.Add(tank.GetInstanceID(), tank);
@@ -100,11 +93,9 @@ public class Factory : MonoBehaviour {
 
 
 	public void recycleBullet(GameObject bullet) {
-		//Debug.Log("recycleBullet");
 		bullets.Remove(bullet.GetInstanceID());
 		freeBullets.Add(bullet.GetInstanceID(), bullet);
 		bullet.GetComponent<Rigidbody>().velocity = new Vector3(0,0,0);
 		bullet.SetActive(false);
-		//Debug.Log("recycleBullet" + freeBullets.Count);
 	}
 }
