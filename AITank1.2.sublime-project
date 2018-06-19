@@ -1,0 +1,38 @@
+{
+    "folders":
+    [
+        {
+            "file_exclude_patterns":
+            [
+                "*.dll",
+                "*.meta",
+                "*.asset",
+                "*.unity",
+                "*.ttf",
+                "*.pdf",
+                "*.unitypackage",
+                "*.mdb",
+                "*.prefab",
+                "*.ogg",
+                "*.controller",
+                "*.anim",
+                "*.jar",
+                ".*"
+            ],
+            "folder_exclude_patterns":
+            [
+                "Fonts",
+                "Materials",
+                "NGUIAtlas",
+                "Prefabs",
+                "StreamingAssets",
+                "Images",
+                "Scenes",
+                ".*"
+            ],
+            "path": "Assets",
+            "follow_symlinks": true
+        }
+    ],
+    "solution_file": "./AITank1.2.sln"
+}
