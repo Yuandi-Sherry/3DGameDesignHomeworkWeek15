@@ -6,12 +6,6 @@
 
 【这篇博客暂时就发到github包里，近日凉凉重装系统还没有把hexo装回来。我会尽快同步到github的blog上的】
 
-视频连接：
-
-整体架构和之前的游戏相似，比如Director类、Factory类以及IUserGUI接口。效果如下：
-
-![preview](https://github.com/Yuandi-Sherry/3DGameDesignHomeworkWeek15/blob/master/preview.gif?raw=true)
-
 首先看一下这次的游戏都有哪些对象以及他们所需要的各种操作：
 
 ### Tank
